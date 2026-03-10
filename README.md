@@ -43,15 +43,24 @@ xdg-open test.bmp
 ```
 
 ## GTK_Demo: A graphical interface to adjust exposure, gain, and white balance in real-time
-1. Install Dependency
+1. Open terminal at target folder and change directory
+```
+cd demo/GTK_Demo
+```
+2. Install Dependency
 ```
 sudo apt-get update
 sudo apt-get install libgtk2.0-dev
 ```
-1.1 Press ```y```
+2.1 Press ```y```
 
-2. Manual compilation
+3. Manual compilation
 ```
-g++ -o GTK_demo ./src/*.cpp -I./inc -I../../include `pkg-config --cflags --libs gtk+-2.0` -L/lib -lMVSDK -lpthread
+g++ -o GTK_demo GTK_demo.cpp ./src/*.cpp -I./inc -I../../include `pkg-config --cflags --libs gtk+-2.0` -L/lib -lMVSDK -lpthread
+```
+4. Run
+```
+ls -l GTK_demo
+sudo ./GTK_demo
 ```
 
